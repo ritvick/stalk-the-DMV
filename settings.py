@@ -2,21 +2,31 @@ SLACK_CHANNEL = '#dmv' # this should be the slack channel which you want to send
 URL = 'https://www.dmv.ca.gov/wasapp/foa/findDriveTest.do' # the url for the DMV web form
 LOCATIONS = {
     #'San Mateo': '130'
-    'San Mateo': '130', # the office ID obtained by inspecting the xpath, this is what selenium uses to identify the correct option
+    'San Mateo': '129', # the office ID obtained by inspecting the xpath, this is what selenium uses to identify the correct option
     'Redwood City': '109',
-    'San Jose': '125',
-    'Daly City': '28'
+    # 'San Jose': '125',
+    'Daly City': '28',
+    'Fremont': '41',
+    'Santa Clara': '134',
+    'Gilroy' : '47',
+    'Los Gatos' : '74',
+    'Oakland Claremont' : '87',
+    'Oakland Colisum' : '88',
+    'Sacramento' : '116',
+    'Sacramento South' : '117',
+    'Capitola' : '15'
+
 }
 PROFILE = {
-    'first_name': 'ANDRE',
-    'last_name': 'TAN',
-    'mm': '09',
-    'dd': '28',
-    'yyyy': '1993',
-    'dl_number': 'Y4497779',
-    'tel_prefix': '650',
-    'tel_suffix1': '660',
-    'tel_suffix2': '7970'
+    'first_name': 'Ritvick',
+    'last_name': 'Paliwal',
+    'mm': '02',
+    'dd': '15',
+    'yyyy': '1990',
+    'dl_number': 'Y3784329',
+    'tel_prefix': '669',
+    'tel_suffix1': '292',
+    'tel_suffix2': '9629'
     # format: (area-code) prefix - lineNumber
 }
 
