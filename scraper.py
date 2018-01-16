@@ -13,16 +13,20 @@ class Scraper:
         browser.get(URL)
         self.browser = browser
         self.logger.log("Navigated to url")
-        time.sleep(5)
+        time.sleep(15)
 
     def i_want_an_appointment_at(self, office_id):
-        self.logger.log("Start appointment searching process")
-        browser = self.form_fill_and_submit(self.browser, office_id)
-        browser.switch_to_default_content()
-        appt = self.get_appointment(browser)
-        return appt
-
+        try:
+            self.logger.log("Start appointment searching process")
+            browser = self.form_fill_and_submit(self.browser, office_id)
+            browser.switch_to_default_content()
+            appt = self.get_appointment(browser)
+            return appt
+        except:
+            self.logger.log("Could Not fill the form")
+    
     def form_fill_and_submit(self, browser, office_id):
+        browser.save_screenshot('ScreenSShot.png')
         browser.find_element_by_xpath('//*[@id="officeId"]/option[{}]'.format(office_id)).click()
         browser.find_element_by_xpath('//*[@id="DT"]').click()
         browser.find_element_by_xpath('//*[@id="first_name"]').send_keys(PROFILE['first_name'])

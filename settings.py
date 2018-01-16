@@ -1,10 +1,10 @@
 SLACK_CHANNEL = '#dmv' # this should be the slack channel which you want to send messages to
 URL = 'https://www.dmv.ca.gov/wasapp/foa/findDriveTest.do' # the url for the DMV web form
 LOCATIONS = {
-    #'San Mateo': '130'
+    'San Mateo': '130',
     'San Mateo': '129', # the office ID obtained by inspecting the xpath, this is what selenium uses to identify the correct option
     'Redwood City': '109',
-    # 'San Jose': '125',
+    'San Jose': '125',
     'Daly City': '28',
     'Fremont': '41',
     'Santa Clara': '134',
